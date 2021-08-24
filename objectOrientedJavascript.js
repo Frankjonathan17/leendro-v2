@@ -228,7 +228,7 @@ window.onload=()=>{
     
 
     if(window.innerWidth<=780){
-        document.addEventListener('scroll', scrolled)
+  
         let headButton = document.querySelector('.header .get-in-touch');
         headButton.textContent='Menu'
 
@@ -783,6 +783,7 @@ function mbele(e){
 
         if(window.innerWidth<780){
             if(fullScreen===false){
+                document.addEventListener('scroll', scrolled)
                 document.documentElement.requestFullscreen();
                 fullScreen=true;
             }
