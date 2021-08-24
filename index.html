@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leendro || Digital Agency</title>
+    <!-- fonts -->
+    <link href="http://fonts.cdnfonts.com/css/airbnb-cereal-app?styles=36584,36586,36587,36583,36585,36582" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+   <!-- styles -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="responsive.css">
+   <!-- scripts -->
+    <script src="gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- mobile menu -->
+    <div class="menuMobile">
+        <div class="menuInside">
+            <span class="closeNav">
+              
+<svg xmlns="http://www.w3.org/2000/svg" 
+="ionicon" viewBox="0 0 512 512"><title>Close Circle</title>
+<path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"/></svg>
+            </span>
+<div class="menuLink">
+                <a href="/pages/work.html">work</a>
+            </div>
+            <div class="menuLink">
+                <a href="/pages/about.html">about</a>
+            </div>
+            <div class="menuLink">
+                <a href="/pages/service.html">service</a>
+            </div>
+            <div class="menuLink">
+                <a href="/pages/contact.html">contact</a>
+            </div>
+        </div>
+    </div>
+    <!-- ends mobile menu -->
+
+    <div class='relative-to-body'></div>
+<div class="loader">
+    <div class="low-connection-message">
+        <span class="message">Your Internet connection is slow!</span>
+    </div>
+  <div class="loading-text"> 
+       <div class="l-text">
+  <div class="firstNumber"> 1</div>
+  <div class="secondNumber">
+     <div class="secondNumberInside">
+        <span>0</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>0</span>
+     </div>
+
+    </div>
+  <span class="thirdNumber">0</span>
+</div>
+  </div>
+    <img  class="link" src="assets/logo.svg" alt="leendro logo">
+</div>
+
+<div class="popUp">
+    <div class="popUp-inside">
+        <span> screen width changed, reload  it?</span>
+        <div class="answers">
+            <span class="yes">Yes</span> <span class="no">no</span>
+        </div>
+    </div>
+</div>
+<div class="show-in-rotate-mode" id="rotateMsg">
+    please rotate your device to get full experience !!
+</div>
+    <div class="app">
+        <span class="link" id="nextSlide">
+        <svg class="link" id="next-slide-button" width="46" height="46" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translate(0px, 0px); opacity: 1;">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 45.3a22.5 22.5 0 100-45 22.5 22.5 0 000 45zm-4.4-24.1a1.5 1.5 0 00-2 2.2l6 5.6c.5.5 1.4.5 2 0l6-5.6a1.5 1.5 0 10-2-2.2l-5 4.6-5-4.6z" fill="#FFFFFF"></path>
+          </svg>
+        </span>
+        <span class="link" id="prevSlide">
+            <svg class="link" id="prev-slide-button" width="46" height="46" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translate(0px, 0px); opacity: 1;">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 45.3a22.5 22.5 0 100-45 22.5 22.5 0 000 45zm-4.4-24.1a1.5 1.5 0 00-2 2.2l6 5.6c.5.5 1.4.5 2 0l6-5.6a1.5 1.5 0 10-2-2.2l-5 4.6-5-4.6z" fill="#FFFFFF"></path>
+              </svg>
+            </span>
+        <header class="header">
+            <div class="left">
+                <span class="inc">INC</span>
+                <span class="Logo-name">
+                    <img  class="link image" src="assets/logo.svg" alt="leendro logo">
+               EENDRO</span>
+            </div>
+            <div class="center">
+                <span class="link">
+                    <a href="pages/work.html">
+                        Work
+                    </a>
+                </span>
+                <span  class="link">
+                    <a href="pages/service.html">
+                        Service
+                    </a>
+                </span>
+                <span  class="link">
+                    <a href="pages/about.html">
+                        About
+                    </a>
+                </span>
+                <span  class="link">
+                    <a href="pages/contact.html">
+                        Contact
+                    </a>
+                </span>
+            </div>
+        <div class="right">
+            <span class="link" id="color-switch" >  
+               
+<svg xmlns="http://www.w3.org/2000/svg" class="link" viewBox="0 0 512 512"><title>Color Fill</title><path d="M416 320s-64 48-64 99.84c0 33.28 28.67 60.16 64 60.16s64-27 64-60.16C480 368 416 320 416 320zM144 32l-76 76 70 70L32 280l176 184 152.8-148.3L416 304zm24 116l-39.6-41 15.88-15.89L184 132z"/></svg>
+         
+        </span>
+            <button class="get-in-touch">
+                <a href="pages/contact.html">
+                    Get in touch
+                </a>
+            </button>
+        </div>
+        </header>
+        <section class="section-1">
+            <div class="colorBox"></div>
+           <div class="img-left">
+               <img  class="image" src="images/crew-left.png" alt="crew-pic">
+           </div>
+           <div class="img-right">
+            <img class="image" src="images/crew-right.png" alt="crew-pic">
+        </div>
+        <div class="info">
+            <div class="intro-text">
+                <div class="intro-top">
+                    <span>Creative digital</span>
+                </div>
+                <div class="intro-center">
+                    <span>Agency for online</span>
+                </div>
+                <div class="intro-bottom">
+                    <span>business is here</span>
+                </div>
+
+            </div>
+            <div class="button-explore">
+                <button>
+                    <a href="/pages/contact.html">
+                        Get in touch
+                    </a>
+                </button>
+                <div class="intro-info">
+                    <div>click arrow to explore</div>
+                    <div>more from us</div>
+                </div>
+                
+                    <div class="arrow">
+                        <div class="down-arrow">
+                        <span  id="linked-svg" class="link"  > 
+    <svg class="linked-svg startPoint" width="46" height="46" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M23 45.3a22.5 22.5 0 100-45 22.5 22.5 0 000 45zm-4.4-24.1a1.5 1.5 0 00-2 2.2l6 5.6c.5.5 1.4.5 2 0l6-5.6a1.5 1.5 0 10-2-2.2l-5 4.6-5-4.6z" fill="#FFFFFF"/>
+    </svg>
+                        </span>
+                   
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </div>
+        </section>
+        <section class="section-2 section">
+            <div class="left-div">
+               <video src="" loop muted autoplay>
+            </video>
+            </div>
+            <div class="right-div">
+               <span class="section-title">
+                   <span class="blockHold">
+                   <span class="a"> Who</span> 
+                   <span class="b">is</span> 
+                   <span class="c">leendro</span> 
+                   <span class="d">?</span>
+                   </span>
+               </span>
+               <div class="section-texts">
+                 Leendro is a digital agency based in Tanzania, <br>
+                  focused in helping startup companies all over <br>the world in developing
+                  profitable  and <br> 
+                  smart technology 
+               </div>
+               <div class="cta-section">
+                   <button>
+                        <a href="pages/about.html">more about us</a>
+                   </button>
+               </div>
+            </div>
+        </section>
+        <section class="section-3 section">
+            
+             <div class="right-div">
+                <span class="section-title">
+                    <span class="blockHold">
+                        <span class="a">I mean</span>
+                        <span class="b"> where</span>
+                        <span class="c">do</span>
+                        <span class="d">we</span>
+                        <span class="e">expertise?</span>
+                    </span>
+                </span>
+                <div class="section-texts">
+                    It's a question we've all been asked . <br>
+                    Inshort Leendro is creating designs, animations,<br> developing app, websites
+                    and rising your online business <br> 
+                    on top of crowd
+                </div>
+                <div class="cta-section">
+                    <button>
+                        <a href="pages/work.html">
+                            view work
+                        </a> 
+                    </button>
+                </div>
+             </div>
+             <div class="left-div">
+                <video src="" loop muted autoplay>
+                   
+             </video>
+             </div>
+        </section>
+        <section class="section-4 section">
+            <div class="left-div">
+               <video src="" loop muted autoplay>
+                  
+            </video>
+            </div>
+            <div class="right-div">
+             
+               <div class="section-texts">
+                   we are problem solvers, coders, advisors, <br>
+                   mentors, storyteller,parents, animators,<br>
+                   friendly, designers, business <br> 
+                  people and more...
+               </div>
+               <span class="section-title" style="height: 5rem;">
+               <span class="blockHold">
+                <span class="a">All</span>
+                <span class="b">at</span>
+                <span class="c">the</span>
+                <span class="d">same</span>
+                 <span class="e">time</span>
+               </span>
+               
+            </span>
+              
+              <div class="cta-section">
+                   <button>
+                    <a href="pages/work.html">
+                        view work
+                    </a> 
+                   </button>
+               </div>
+           </div>
+        </section>
+    
+
+        <section class="section-5 section">
+            <div class="left-div">
+               <video src="" loop muted autoplay>
+                  
+            </video>
+            </div>
+            <div class="right-div">
+               <span class="section-title">
+                   <span class="blockHold">
+                <span class="a">This</span>
+                <span class="b">is</span>
+                <span class="c">leendro </span>
+               </span></span>
+               <div class="section-texts">
+                   Over 250+ clients worked with us, <br>
+                   in the past few years,including <br>  companies, individuals
+                   they trust us
+                  <br> and  they never disappointed with our work
+                   
+               </div>
+               <div class="cta-section">
+                   <button>
+                    <a href="pages/work.html">
+                        view work
+                    </a> 
+                   </button>
+               </div>
+            </div>
+        </section>
+        <section class="section-6 section"> 
+            <div class="right-div">
+               <span class="section-title">
+                   <span class="blockHoldd">
+
+                      <span class="blockHold">
+                        <span class="a">Get exited</span>
+                      </span>
+                
+                 <span class="blockHold">
+                    <span class="b">
+                        with our advanced 
+                      </span>
+                 </span>
+                   <span class="blockHold">
+                    <span class="c">
+                        services from the experts
+                      </span>
+                   </span>
+                   
+                  <span class="blockHold">
+                    <span class="d">
+                        to real product
+                      </span>
+                  </span>   
+                   </span>
+            </span>
+               <div class="section-texts">
+                   in industry more than 5 years <br>
+                   of expertise in design, <br> apps and  ,website
+                   and online business <br> 
+                   like CEO tools
+               </div>
+               <div class="cta-section">
+                   <button>
+                    <a href="pages/service.html">
+                        view our service
+                    </a> 
+                   </button>
+               </div>
+            </div>
+            <div class="left-div">
+               <video src="" loop muted autoplay>
+                  
+            </video>
+            </div>
+       </section>
+       <section class="section-7 section">
+        <div class="left-div">
+           <video src="" loop muted autoplay>
+              
+        </video>
+        </div>
+        <div class="right-div">
+           <span class="section-title">
+               <span class="blockHold">
+               <span class="a">
+               We are using
+               </span>
+               <br>
+               <span class="b">
+                best technology
+               </span>
+               <br>
+               <span class="c">
+                in the market
+               </span>
+               </span>
+           </span>
+           <div class="section-texts">
+               For websites creation is Html, Css, Javascript . <br>
+               Database are Sql, MongoDb, Google Firebase <br> Backend we use PHP, node.js
+               and Python. <br> 
+               Designing and animating tools are Adobe<br> photoshop,
+                xd, after effects, figma and blender  
+           </div>
+           <div class="cta-section">
+               <button>
+                <a href="pages/work.html">
+                    view work
+                </a> 
+               </button>
+           </div>
+        </div>
+    </section>
+    <section class="section-8 section">
+            
+        <div class="right-div">
+           <span class="section-title">
+               <span class="blockHold">
+                <span class="a">
+                   We take your business
+                   </span>
+                   <br>
+                   <span class="b">
+                    to the 
+                   </span>
+                   <span class="c">
+                    next levels
+                   </span>
+               </span>
+           </span>
+           <div class="section-texts">
+             focusing on creating valuable interactions  <br>
+             through digital innovation to provide<br>  users
+             with a lasting impression, stand out of crowd <br> 
+             and strong relationships.
+           </div>
+           <div class="cta-section">
+               <button>
+                <a href="pages/contact.html">
+                    contact us
+                </a> 
+               </button>
+           </div>
+        </div>
+        <div class="left-div">
+           <video src="" loop muted autoplay>
+              
+        </video>
+        </div>
+   </section>
+   <section class="section-9 section">
+    <div class="left-div">
+       <video src="" loop muted autoplay>
+          
+    </video>
+    </div>
+    <div class="right-div">
+       <span class="section-title">
+           <span class="blockHold">
+            <span class="a">
+               we  are
+               </span>
+               <span class="b">
+                working
+               </span>
+               <br>
+               <span class="c">
+                hard and
+               </span>
+               <span class="d">
+                smart
+               </span>
+           </span>
+       </span>
+       <div class="section-texts">
+         In each project we conduct reseach <br>
+          and collecting valueble data <br> in order
+           to come with unique results<br> 
+           for your product or business
+       </div>
+       <div class="cta-section">
+           <button>
+            <a href="pages/contact.html">
+                contact us
+            </a> 
+           </button>
+       </div>
+    </div>
+</section>
+<section class="section-10 section">
+    <div class="left-div">
+       <video src="" loop muted autoplay>
+          
+    </video>
+    </div>
+    <div class="right-div">
+       <span class="section-title">
+           <span class="blockHold">
+            <span class="a">
+                Contact
+               </span>
+               <span class="b">
+                us
+               </span>
+               <span class="c">
+                today
+               </span>
+               <span class="d">
+                        </span>
+           </span>
+       </span>
+    
+        <div class="section-texts">
+            working time  is 10:00am - 5:00pm everday.
+              <br>
+           our offices will be opened soon at,<br>
+            Dar es salaam, Arusha and Mwanza.
+        <br> Reach us through 
+            Call: <a href="tel:0000000" id="underline" class="link">+2550000
+            </a>
+            <br>
+            or Email: <a  class="link" href="mailto:leendrotanzania@gmail.com">leendrotanzania@gmail.com</a>
+        </div>
+        <div class="cta-section">
+            <button>
+                <a href="pages/contact.html">
+                    open contact form
+                </a> 
+            </button>
+        </div>
+    </div>
+    <footer class="footer">
+          <div class="footer-flex">
+              <div class="footer-left">
+                 <h2>PATNERS</h2>
+                 <div class="patners">
+                     <span> leesounds.com </span>
+                     <span>leeminds.com</span>
+                     <span>legan.com</span>
+                     <span>Serengeti tech</span>
+                 </div>
+              </div>
+              <div class="footer-right">
+                  <h2>FOLLOW US</h2>          
+                   <div class="follow-us-links">
+                       <span>
+                           <span class="link" onclick="window.open('https://www.google.com')">
+                               
+                            <img src="assets/facebook.png" alt="leendro facebook account" >
+                                         </span>
+                       </span>
+                       <span>
+                           <span class="link" onclick="window.open('https://www.google.com')">
+                               
+                            <img src="assets/instagram.png" alt="leendro instagram " >  </span>
+                       </span>
+                       <span>
+                           <span class="link" onclick="window.open('https://www.google.com')">
+                            <img  class="youtube" src="assets/youtube.png" alt="leendro youtube " >
+                           </span>
+                       </span>
+                       <span>
+                           <span class="link" onclick="window.open('https://www.google.com')">
+   <img src="assets/whatsapp.png" alt="leendro whatsaap number" >
+                           </span>
+                       </span>
+                   </div>
+                </div>
+             
+          </div>
+          <div class="footerBottom">
+          <div class="flex-all-center">
+              <span>copyright @leendro.inc 2021 - 2022. All right reserved.</span>
+          </div>
+         </div>
+    </footer>
+
+    <div class="overlaySlide"></div>
+</section> 
+    </div>
+
+    
+    <script src="imagesloaded.pkgd.min.js"></script>
+    <script src="script.js"></script>
+    <script src="objectOrientedJavascript.js"></script>
+  
+    
+</body>
+</html>
