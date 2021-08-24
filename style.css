@@ -881,7 +881,7 @@ z-index: 99999999999;
     color: rgb(229, 84, 84) !important;
     z-index: 99;
     display: none;
-    width: 100%;
+    white-space: none;
 
 }
 
