@@ -783,7 +783,7 @@ function mbele(e){
 
         if(window.innerWidth<780){
             if(fullScreen===false){
-                document.addEventListener('scroll', scrolled)
+                // document.addEventListener('scroll', scrolled)
                 document.documentElement.requestFullscreen();
                 fullScreen=true;
             }
@@ -3471,35 +3471,35 @@ function scrolled(e){
     
     
     // console.log('past: ',pastPos)
-    collection= relative.getBoundingClientRect();
-    currentPosition = collection.y
+    // collection= relative.getBoundingClientRect();
+    // currentPosition = collection.y
    
-       console.log('current: ',currentPosition)
-       if(pastPos<=currentPosition){
-        document.removeEventListener('scroll', scrolled);
+    //    console.log('current: ',currentPosition)
+    //    if(pastPos<=currentPosition){
+    //     document.removeEventListener('scroll', scrolled);
         
-       setTimeout(() => {
-        document.addEventListener('scroll', scrolled)
-       }, 1200);
-           console.log('moving back')
-           e.key="ArrowUp"
+    //    setTimeout(() => {
+    //     document.addEventListener('scroll', scrolled)
+    //    }, 1200);
+        //    console.log('moving back')
+        //    e.key="ArrowUp"
 
-           callBack_Listener(e);
-       }
-       if(pastPos>=currentPosition){
-        document.removeEventListener('scroll', scrolled);
+        //    callBack_Listener(e);
+       //}
+    //    if(pastPos>=currentPosition){
+    //     document.removeEventListener('scroll', scrolled);
         
-       setTimeout(() => {
-        document.addEventListener('scroll', scrolled)
-       }, 1200);
-        console.log('moving foward')
-        e.key="ArrowDown"
-        callBack_Listener(e);
+    // //    setTimeout(() => {
+    // //     document.addEventListener('scroll', scrolled)
+    // //    }, 1200);
+    //     console.log('moving foward')
+    //     e.key="ArrowDown"
+    //     callBack_Listener(e);
         
-       }
+    //    }
            
        
-       pastPos = currentPosition;
+    //    pastPos = currentPosition;
 
 
 }
