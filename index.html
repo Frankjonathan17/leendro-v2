@@ -13,6 +13,14 @@
    <!-- styles -->
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="responsive.css">
+   <style>
+    .inWhite{
+        height: 0vh;
+    }
+    .main-loader{
+        transform: translateY(-101vh);
+    }
+   </style>
    <!-- scripts -->
     <script src="gsap.min.js"></script>
 </head>
@@ -28,16 +36,17 @@
 <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"/></svg>
             </span>
 <div class="menuLink">
-                <a href="/pages/work.html">work</a>
+    <a onclick="window.loader('work','work')">work</a>
             </div>
             <div class="menuLink">
-                <a href="/pages/about.html">about</a>
+                <a onclick="window.loader('about','about')">about</a>
+                </a>
             </div>
             <div class="menuLink">
-                <a href="/pages/service.html">service</a>
+                <a onclick="window.loader('service','service')">service</a>
             </div>
             <div class="menuLink">
-                <a href="/pages/contact.html">contact</a>
+                <a onclick="window.loader('contact','contact')">contact</a>
             </div>
         </div>
     </div>
@@ -104,24 +113,16 @@
             </div>
             <div class="center">
                 <span class="link">
-                    <a href="pages/work.html">
-                        Work
-                    </a>
+                    <a onclick="window.loader('work','work')">work</a>
                 </span>
                 <span  class="link">
-                    <a href="pages/service.html">
-                        Service
-                    </a>
+                    <a onclick="window.loader('service','service')">service</a>
                 </span>
                 <span  class="link">
-                    <a href="pages/about.html">
-                        About
-                    </a>
+                    <a onclick="window.loader('about','about')">about</a>
                 </span>
                 <span  class="link">
-                    <a href="pages/contact.html">
-                        Contact
-                    </a>
+                    <a onclick="window.loader('contact','contact')">contact</a>
                 </span>
             </div>
         <div class="right">
@@ -559,8 +560,13 @@
     </footer>
 
     <div class="overlaySlide"></div>
+
 </section> 
     </div>
+<div class="main-loader">
+    <h1>work</h1>
+    <div class="inWhite"></div>
+</div>
 
     
     <script src="imagesloaded.pkgd.min.js"></script>
