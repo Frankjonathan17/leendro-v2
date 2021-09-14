@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- fonts -->
+    <link href="http://fonts.cdnfonts.com/css/airbnb-cereal-app?styles=36584,36586,36587,36583,36585,36582" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+<!-- styles -->
+<link rel="stylesheet" href="work.css">
+<link rel="stylesheet" href="../responsive.css">
+<style>
+    .inWhite{
+        height: 0vh;
+    }
+    .main-loader{
+        transform: translateY(-101vh);
+    }
+   </style>
+<!-- scripts -->
+<script src="../gsap.min.js"></script>
+</head>
+<body style="overflow: auto; min-height: 102vh; background: rgb(255, 156, 67);">
+
+    
+    <!-- mobile menu -->
+    <div class="menuMobile">
+        <div class="menuInside">
+            <span class="closeNav">
+              
+<svg xmlns="http://www.w3.org/2000/svg" 
+="ionicon" viewBox="0 0 512 512"><title>Close Circle</title>
+<path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"/></svg>
+            </span>
+            <div class="menuLink">
+                <a onclick="window.loader('work','work')">work</a>
+                        </div>
+                        <div class="menuLink">
+                            <a onclick="window.loader('about','about')">about</a>
+                            </a>
+                        </div>
+                        <div class="menuLink">
+                            <a onclick="window.loader('service','service')">service</a>
+                        </div>
+                        <div class="menuLink">
+                            <a onclick="window.loader('contact','contact')">contact</a>
+                        </div>
+        </div>
+    </div>
+    <!-- ends mobile menu -->
+    <div class="work-container">
+        <header class="header" style="background: rgb(255, 156, 67);">
+            <div class="left">
+                <span class="inc">INC</span>
+                <span class="Logo-name">
+                 <a href="../index.html">   <img  class="link image" src="../assets/logo.svg" alt="leendro logo"></a>
+                 <a href="../index.html"> EENDRO </a>  </span>
+            </div>
+            <div class="center">
+                <span class="link">
+                    <a onclick="window.loader('work','work')">work</a>
+                </span>
+                <span  class="link">
+                    <a onclick="window.loader('service','service')">service</a>
+                </span>
+                <span  class="link">
+                    <a onclick="window.loader('about','about')">about</a>
+                </span>
+                <span  class="link">
+                    <a onclick="window.loader('contact','contact')">contact</a>
+                </span>
+            </div>
+        <div class="right">
+            <div class="progress"></div>
+            <button class="get-in-touch" style="background: rgb(214, 115, 28);">
+             <a href="contact.html">
+                 Get in touch
+             </a>
+            </button>
+        </div>
+        <div class="line-progress"></div>
+        </header>
+        <div class="container--inner">
+            <div class="work-page-title">
+                <h1 style="color:rgb(214, 115, 28);">CONTACT</h1>
+            </div>
+            
+             <div class="members-container">
+              <div class="align">
+                <div class="centered">
+                   <form action="#" method="POST">
+                    <label for="username">*Username</label>
+                    <br>
+                     <input type="text" name="username">
+                    <br>
+                    <label for="email">*Email</label>
+                    <br>
+                       <input type="email" name="email">
+                      <br>
+                      <label for="phone">*Phone</label>
+                      <br>
+                       <input type="tel" name="phone">
+                   <br>
+                       <button type="submit" name="submit">submit</button>
+                       
+                   </form>
+                   </div>
+              </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="main-loader">
+        <h1>contact</h1>
+        <div class="inWhite"></div>
+    </div>
+<div class="white"></div>
+    <script>
+        window.onload=()=>{
+
+
+            let loadDiv = document.querySelector('.main-loader');
+        let white = loadDiv.querySelector('.inWhite');
+
+        let tl= new gsap.timeline();
+        let w = document.querySelector('.white');
+        setTimeout(() => {
+            w.parentElement.removeChild(w)
+        }, 990);
+        tl
+        .to(w,{
+            y:'102vh',
+            ease:"expo.out",
+            duration:.8,
+            delay:0
+        })
+
+
+
+        function findTheme(){
+   if( window.location.href.includes('bl')) return 'blue';
+   else if( window.location.href.includes('og')) return 'orange';
+   else if( window.location.href.includes('pi')) return 'pink';
+   else if( window.location.href.includes('vip')) return 'violet';
+   else if( window.location.href.includes('gr')) return 'green';
+   else if( window.location.href.includes('ye')) return 'yellow';
+   else  return 'orange';
+ }
+ function findColor(){
+   if( window.location.href.includes('bl')) return 'var(--blue)';
+   else if( window.location.href.includes('og')) return 'var(--orange)';
+   else if( window.location.href.includes('pi')) return 'var(--pink)';
+   else if( window.location.href.includes('vip')) return 'var(--violet)';
+   else if( window.location.href.includes('gr')) return 'var(--green)';
+   else if( window.location.href.includes('ye')) return 'var(--yellow)';
+   else  return 'var(--orange)';
+ }
+ function findColor4buttons(){
+   if( window.location.href.includes('bl')) return 'var(--dblue)';
+   else if( window.location.href.includes('og')) return 'var(--dorange)';
+   else if( window.location.href.includes('pi')) return 'var(--dpink)';
+   else if( window.location.href.includes('vip')) return 'var(--dviolet)';
+   else if( window.location.href.includes('gr')) return 'var(--dgreen)';
+   else if( window.location.href.includes('ye')) return 'var(--dyellow)';
+   else  return 'var(--dorange)';
+ }
+
+
+
+ 
+ function seThem(){
+      
+      
+    if( window.location.href.includes('bl')) window.theme= 'bl';
+   else if( window.location.href.includes('og')) window.theme='og';
+   else if( window.location.href.includes('pi')) window.theme='pi';
+   else if( window.location.href.includes('vip')) window.theme= 'vip';
+   else if( window.location.href.includes('gr')) window.theme='gr';
+   else if( window.location.href.includes('ye')) window.theme='ye';
+   else  window.theme='orange';
+
+     }
+  
+     seThem();
+
+            let theme = findTheme()
+            console.log(theme)
+            loadDiv.style.background=findColor();
+           document.querySelector('body').style.background=findColor();
+           document.querySelector('.header').style.background=findColor();
+           document.querySelector('.menuInside').style.background=findColor();
+           document.querySelector('.get-in-touch').style.background=findColor4buttons();
+           document.querySelector('form button').style.background=findColor4buttons();
+           document.querySelector('.work-page-title h1').style.color=findColor4buttons();
+           document.querySelector('.closeNav svg').style.fill=findColor4buttons();
+           
+
+
+
+
+
+
+// window.loader method
+
+window.loader=function(direction,page='work'){
+
+    window.scrollTo(0,0)
+
+
+let loadDiv = document.querySelector('.main-loader');
+let white = loadDiv.querySelector('.inWhite');
+loadDiv.style.background=findColor();
+loadDiv.querySelector("h1").innerText=page;
+
+
+setTimeout(() => {
+    window.open(`${direction}.html?tz=${window.theme}`,'_Parent')
+}, 1650);
+
+
+
+let tl = new gsap.timeline();
+
+tl.to(loadDiv,{
+    y:0,
+    ease:"expo.out",
+    duration:.89,
+    delay:0,
+})
+.to(white,{
+    height:'110vh',
+    ease:"expo.out",
+    duration:.8,
+    delay:.3
+})
+
+}
+
+
+            let form = document.querySelector('form');
+            form.onsubmit=(e)=>{
+                e.preventDefault()
+                setTimeout(() => {
+                    console.log(' data not submitted')
+                }, 300);
+            }
+            let headButton = document.querySelector('.header button');
+            if(window.innerWidth<=780){
+                headButton.textContent='Menu'
+
+
+                
+
+
+        let menu = document.querySelector('.header button');
+        let menuMobile = document.querySelector('.menuMobile');
+        let menuCloseSvg = document.querySelector('.menuInside svg');
+        let menuInside = document.querySelector('.menuInside');
+        
+        const openMenu=()=>{
+        
+          let  timeline =new gsap.timeline();
+            menu.removeEventListener('click', openMenu)
+            menuMobile.style.display='flex';
+             timeline.from(menuMobile,{
+                opacity:0,
+                y:"-110vh",
+                duration:.4,
+                ease:"Power3.out",
+                delay:0
+         },'pamoja')
+             .to(menuMobile,{
+                y:"0vh",
+                    opacity:1,
+                    duration:.4,
+                    ease:"Power3.out",
+                    delay:0
+             },'pamoja')
+             .to(menuInside,{
+                opacity:1,
+                scale:0.5,
+                duration:.5,
+                ease:"Power3.out",
+                delay:.3
+         },'pamoja')
+         .to(menuInside,{
+            opacity:1,
+            scale:1.18,
+            duration:.5,
+            ease:"Power3.out",
+            delay:.36
+        },'pamoja')
+        .to(menuInside,{
+            opacity:1,
+            scale:1,
+            duration:.5,
+            ease:"Power3.out",
+            delay:.48
+        },'pamoja')
+        
+        
+        }
+        
+        const closeMenu=()=>{
+            menu.addEventListener('click', openMenu);
+
+           
+            let  timeline =new gsap.timeline();
+             timeline.from(menuInside,{
+                opacity:1,
+                scale:1,
+                duration:.5,
+                ease:"Power3.out",
+                delay:.48
+            },'pamoja').to(menuInside,{
+                opacity:0,
+                scale:1.2,
+                duration:.4,
+                ease:"Power3.out",
+                delay:0.3
+            },'pamoja')
+                .to(menuMobile,{
+                y:"-110vh",
+                    opacity:0,
+                    duration:.4,
+                    ease:"Power3.out",
+                    delay:.5
+             },'pamoja')
+
+
+        }
+        
+        menu.addEventListener('click', openMenu)
+        menuCloseSvg.addEventListener('click', closeMenu)
+
+            }
+            else{
+                
+            }
+        }
+
+    </script>
+    <script src="mouse.js"></script>
+</body>
+</html>
