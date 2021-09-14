@@ -118,6 +118,48 @@ const TEsButton = document.querySelector('.section-10 button');
 
 window.onload=()=>{
 
+ 
+    // creating global theme var in window object
+    window.theme='bl'
+
+   
+     window.loader=function(direction,page='work'){
+
+        let loadDiv = document.querySelector('.main-loader');
+        let white = loadDiv.querySelector('.inWhite');
+          function colors(){
+            if( window.theme===('bl')) return 'var(--blue)';
+            else if(window.theme===('og')) return 'var(--orange)';
+            else if( window.theme===('pi')) return 'var(--pink)';
+            else if( window.theme===('vip')) return 'rgb(160, 91, 246)';
+            else if( window.theme===('gr')) return 'var(--green)';
+            else if( window.theme===('ye')) return 'var(--yellow)';
+            else  return '#543DE0';
+          }
+        loadDiv.style.background=colors();
+        loadDiv.querySelector("h1").innerText=page;
+        setTimeout(() => {
+            window.open(`pages/${direction}.html?tz=${window.theme}`,'_Parent')
+        }, 1650);
+    
+    
+
+        let tl = new gsap.timeline();
+        
+        tl.to(loadDiv,{
+            y:0,
+            ease:"expo.out",
+            duration:.89,
+            delay:0,
+        })
+        .to(white,{
+            height:'110vh',
+            ease:"expo.out",
+            duration:.8,
+            delay:.3
+        })
+
+     }
 
 
     
@@ -164,6 +206,7 @@ window.onload=()=>{
             else if(t.className == "Logo-name"){
               f.classList.add("scale-down-cursor-follow")
               c.classList.add("sclae-up-cursor")
+              
                           
                move(c,e)
             }
@@ -182,13 +225,10 @@ window.onload=()=>{
             }
 
             else if(t.tagName == "A"){
-              f.classList.add("onFocus")
-               c.style.backgroundColor = "transparent"
-               f.style.top = t.offsetTop + "px";
-               f.style.left = t.offsetLeft + "px";
-               f.style.width = t.clientWidth + "px"
-               f.style.height = t.clientHeight + "px";
-               f.style.borderRadius =0
+                f.classList.add("scale-down-cursor-follow")
+                c.classList.add("sclae-up-cursor")
+                            
+                 move(c,e)
             }
             else{
                 f.classList.remove("onFocus")
@@ -294,14 +334,14 @@ window.onload=()=>{
             },'pamoja').to(menuInside,{
                 opacity:0,
                 scale:1.2,
-                duration:.3,
+                duration:.4,
                 ease:"Power3.out",
                 delay:0.3
             },'pamoja')
                 .to(menuMobile,{
                 y:"-110vh",
                     opacity:0,
-                    duration:.2,
+                    duration:.4,
                     ease:"Power3.out",
                     delay:.5
              },'pamoja')
@@ -888,46 +928,70 @@ var databases = [
 
 function changeButtonColor(color){
     if(color==='blue'){
-       
+
+       window.theme='bl'
+       document.querySelector('.closeNav svg').style.fill="var(--dblue)"
+           document.querySelector('.menuInside').style.background="var(--blue)"
+
         setTimeout(() => {
             button_main.style.background='#40BE88';
         }, 300);
     }
     
     else if(color==='full-blue'){
+        window.theme='bl'
+        document.querySelector('.closeNav svg').style.fill="var(--dblue)"
+        document.querySelector('.menuInside').style.background="var(--blue)"
         setTimeout(() => {
          button_main.style.background='rgb(49 45 197)';
         }, 300);
          }
     else if(color==='orange'){
+        window.theme='og'
+        document.querySelector('.closeNav svg').style.fill="var(--dorange)"
+        document.querySelector('.menuInside').style.background="var(--orange)"
    setTimeout(() => {
     button_main.style.background='rgb(214, 115, 28)';
    }, 300);
     }
     else if(color==='green'){
-      
+        window.theme='gr'
+        document.querySelector('.closeNav svg').style.fill="var(--dgreen)"
+        document.querySelector('.menuInside').style.background="var(--green)"
         setTimeout(() => {
             button_main.style.background='rgb(13 156 72)';
         }, 300);
 
     }
     else if(color==='pink'){
-       
+        window.theme='pi'
+        document.querySelector('.closeNav svg').style.fill="var(--dpink)"
+        document.querySelector('.menuInside').style.background="var(--pink)"
         setTimeout(() => {
             button_main.style.background='rgb(230 57 71)';
         }, 300);
     }
     else if(color==='violet'){
+        window.theme='vip';
+        window.theme='vip';
+        document.querySelector('.closeNav svg').style.fill="var(--dviolet)"
+        document.querySelector('.menuInside').style.background="var(--violet)"
       setTimeout(() => {
         button_main.style.background='rgb(136 28 214)';
       }, 300);
     }
     else if(color==='yellow'){
+        window.theme='ye'
+        document.querySelector('.closeNav svg').style.fill="var(--dyellow)"
+        document.querySelector('.menuInside').style.background="var(--yellow)"
       setTimeout(() => {
         button_main.style.background='rgb(232 167 14)';
       }, 300);
     }
     else{
+        window.theme='bl'
+        document.querySelector('.closeNav svg').style.fill="var(--dblue)"
+        document.querySelector('.menuInside').style.background="var(--blue)"
     console.log('button color cannot be updated! please refresh site now');
     }
 }
@@ -945,7 +1009,6 @@ class leendro {
 
          let direct = direction;
          if(direct==='next'){
-            console.log('hapa next ni:',GLOBAL_CURRENT_SLIDE)
           if(GLOBAL_CURRENT_SLIDE===1){
            
            
@@ -2138,7 +2201,6 @@ else if(GLOBAL_CURRENT_SLIDE===10){
             
          else if(direct === 'prev'){
         
-             console.log('hapa prev ni:',GLOBAL_CURRENT_SLIDE)
              if(GLOBAL_CURRENT_SLIDE===0){
                
                 const tl = new gsap.timeline ();
@@ -3319,8 +3381,6 @@ else if(GLOBAL_CURRENT_SLIDE===9){
     RenderObj(slideObj,position){
       
 
-        console.log('GLOBAL CURRENT NI: ',GLOBAL_CURRENT_SLIDE)
-
         let pos = position;
        let setting = slideObj;
        let readyObj = {
@@ -3332,16 +3392,15 @@ else if(GLOBAL_CURRENT_SLIDE===9){
 
        switch(pos){
            case 'prev':{
-               console.log('i received prev objct');
+            
                this.animateSlides('prev');
               break
            }
            case 'current':{
-               console.log('i received current objct');
+           
              break
            }
            case 'next':{
-               console.log('i received next objct')
                this.animateSlides('next');
             break 
            }
@@ -3829,7 +3888,7 @@ function checkVideoLoaded(){
     
     }
     else{
-        console.log(numberOfLoadedVideo);
+       return
     }
 }
 
